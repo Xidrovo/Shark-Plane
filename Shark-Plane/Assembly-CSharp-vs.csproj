@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\KeyboardControl.cs" />
      <Compile Include="Assets\Scripts\PewPew.cs" />
+     <Compile Include="Assets\Scripts\explosion.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

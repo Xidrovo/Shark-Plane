@@ -31,23 +31,6 @@ public class PewPew : MonoBehaviour {
 		nuevo.GetComponent<Rigidbody> ().AddRelativeForce ((new Vector2 (speed, 0)), ForceMode.Impulse);
 
 	}
-	public void OnCollisionEnter(Collision col)
-	{
-		
-		if (col.gameObject.CompareTag ("Enemy")) 
-		{
-			//pierde vidas
-		}
-		Destroy(this);
-	}
-	public void OnTriggerExit(Collider col)
-	{
-		
-		if (col.gameObject.CompareTag ("MainCamera")) 
-		{
-			Destroy(this);
-		}
 
-	}
 
 }
