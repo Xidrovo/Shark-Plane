@@ -12,22 +12,23 @@ public class explosion : MonoBehaviour {
 	void Update () {
 	
 	}
-	public void OnCollisionEnter(Collision col)
+	public void OnColisionrEnter(Collision col)
 	{
 		
-		//if (col.gameObject.CompareTag ("Enemy")) 
+		if (col.gameObject.CompareTag ("Enemy")) 
 		{
 			//pierde vidas
+
 		}
-		Destroy(this);
+		Destroy(this.gameObject);
 	}
 	public void OnTriggerExit(Collider col)
 	{
 		
-		if (col.gameObject.CompareTag ("MainCamera")) 
+		if (col.gameObject.name.Equals("Main Camera")) 
 		{
-			Destroy(this);
+
 		}
-		
+		Destroy(this.gameObject);
 	}
 }
