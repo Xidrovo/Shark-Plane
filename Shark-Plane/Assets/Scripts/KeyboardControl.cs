@@ -26,10 +26,6 @@ public class KeyboardControl : MonoBehaviour {
 		} else {
 			Speed = 5f;
 		}
-		if (Input.GetKey (KeyCode.LeftArrow)) 
-		{
-			PewPew a= new PewPew();
-			a.CrearBala();
-		}
+
 	}
 }
