@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: ebee0933ad4bb41489a0354c2c172bca
-timeCreated: 1439521355
+timeCreated: 1439574112
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - villano: {instanceID: 0}
+  - prefab: {fileID: 193558, guid: d6863302719bcb34a938f171d7c06789, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
