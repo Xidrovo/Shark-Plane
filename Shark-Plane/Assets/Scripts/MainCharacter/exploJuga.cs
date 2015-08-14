@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class explosion : MonoBehaviour {
+public class exploJuga : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,11 +14,11 @@ public class explosion : MonoBehaviour {
 	}
 	public void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.CompareTag ("Enemy")) 
+		if (col.gameObject.CompareTag ("Player")) 
 		{
 			Destroy(this.gameObject);
 		}
-
+		
 	}
 	public void OnTriggerExit2D(Collider2D col)
 	{
