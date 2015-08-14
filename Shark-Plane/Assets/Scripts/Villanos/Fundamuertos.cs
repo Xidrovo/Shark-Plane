@@ -3,63 +3,51 @@ using System.Collections;
 
 public class Fundamuertos : MonoBehaviour {
 
+	private GameObject shark;
 	private Atributos atri;
 	private bool Subir;
-	private bool AmpliarVuelo;
-	private float CorteAmplitud;
-	private float AltoMax;
-	private float Amplitud;
 	
 	// Use this for initialization
 	void Start () {
+		shark = GameObject.FindWithTag("Player");
 		Subir = true;
-		AmpliarVuelo = false;
-		CorteAmplitud = 1f;
-		atri = GetComponent<Atributos> ();
-		AltoMax = atri.AlturaMax;
-		Amplitud = atri.Rango;
+		atri = GetComponent<Atributos>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Subir) {
-			BottomUp();
-			if((int)(this.gameObject.transform.position.y)==(int)((int)(AltoMax))){
-				Subir = false;
-			}
+		if (SharkCerca()) {
+			AtacarHorizontal();
 		} else {
-			TopDown();
-			if((int)(this.gameObject.transform.position.y)==(int)(AltoMax - Amplitud)){
-				Subir = true;
+			if (Subir) {
+				BottomUp ();
+				if ((int)(this.gameObject.transform.position.y) == (int)(atri.AlturaMax)) {
+					Subir = false;
+				}
+			} else {
+				TopDown ();
+				if ((int)(this.gameObject.transform.position.y) == (int)(atri.AlturaMax - atri.Rango)) {
+					Subir = true;
+				}
 			}
 		}
-		if(AmpliarVuelo){
-			CorteAmplitud += Time.deltaTime;
-			AltoMax = atri.AlturaMax + (atri.AlturaMax*((int)(CorteAmplitud)/2f));
-		}else{
-			CorteAmplitud -= Time.deltaTime;
-			AltoMax = atri.AlturaMax - (atri.AlturaMax/((int)(CorteAmplitud)*2f));
-		}
-		Amplitud = atri.Rango /((int)(CorteAmplitud));
-		if (CorteAmplitud >3f) {
-			CorteAmplitud = 3f;
-			AmpliarVuelo = false;
-		} else if (CorteAmplitud <1f) {
-			CorteAmplitud = 1f;
-			AmpliarVuelo = true;
-		}
-		MoveHorizontal ();
 	}
 	
 	void BottomUp(){
-		transform.Translate (Vector3.up * atri.Speedy * Time.deltaTime/CorteAmplitud);
+		transform.Translate (Vector3.up * atri.Speedy * Time.deltaTime);
 	}
 	
 	void TopDown(){
-		transform.Translate (Vector3.down * atri.Speedy * Time.deltaTime/CorteAmplitud);
+		transform.Translate (Vector3.down * atri.Speedy * Time.deltaTime);
 	}
 	
-	void MoveHorizontal(){
-		transform.Translate (Vector3.right * atri.Speedx * Time.deltaTime);
+	void AtacarHorizontal(){
+		transform.Translate (Vector3.left * atri.Speedx * Time.deltaTime);
+	}
+	
+	bool SharkCerca(){
+		if (Vector3.Distance(this.gameObject.transform.position,shark.transform.position) <= 8f)
+			return true;
+		return false;
 	}
 }
