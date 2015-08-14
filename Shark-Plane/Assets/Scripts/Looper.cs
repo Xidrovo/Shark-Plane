@@ -6,24 +6,32 @@ public class Looper : MonoBehaviour {
 	public GameObject PortalOut;
 	public GameObject MainCharacter, Boss, Camara;
 
-	private Vector3 Temp, TempMain, TempBoss;
+	public GameObject WordSpace;
+	private Vector3 Temp, TempMain, TempBoss, Relative;
+	private int Cont = 0;
+	
 
 	void OnTriggerEnter2D(Collider2D Trigg)
 	{
 		Temp = Camara.transform.position;
 
-		TempMain.y = Temp.y - MainCharacter.transform.position.y;
-		TempMain.z = 0f;
-
 		Temp.x = PortalOut.transform.position.x;
+		WordSpace.transform.position = Temp;
+
+		Relative = WordSpace.transform.InverseTransformPoint(TempMain);
+//		Relative.z = 0;
 		Camara.transform.position = Temp;
-		TempMain.x =  MainCharacter.transform.position.x - Camara.transform.position.x;
+		MainCharacter.transform.position = Relative;
 
-		TempBoss = Boss.transform.position;
-		TempBoss.x = PortalOut.transform.position.x;
+	}
 
+	void Update()
+	{
+		TempMain.x =  Camara.transform.position.x - MainCharacter.transform.position.x;
+		TempMain.y = MainCharacter.transform.position.y - Camara.transform.position.y;
+		TempMain.z = 10f;
+		Relative = Camara.transform.InverseTransformDirection(TempMain);
 
-		MainCharacter.transform.position = TempMain;
-		Boss.transform.position = TempBoss;
+		Debug.Log (Relative);
 	}
 }
