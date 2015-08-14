@@ -3,7 +3,7 @@ using System.Collections;
 
 public class KeyboardControl : MonoBehaviour {
 
-	public float Speed = 5f;
+	public float Speed = 5f, HighSpeed = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +13,7 @@ public class KeyboardControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Movement ();
+		HighAndLow ();
 		transform.Translate (Vector3.right * Speed * Time.deltaTime);
 
 	}
@@ -26,6 +27,18 @@ public class KeyboardControl : MonoBehaviour {
 		} else {
 			Speed = 5f;
 		}
+	}
 
+	public void HighAndLow()
+	{
+		if (Input.GetKey (KeyCode.UpArrow)) 
+		{
+			transform.Translate (Vector3.up * HighSpeed * Time.deltaTime);
+		}
+
+		if (Input.GetKey (KeyCode.DownArrow)) 
+		{
+			transform.Translate (Vector3.down * HighSpeed * Time.deltaTime);
+		}
 	}
 }
