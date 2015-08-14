@@ -4,35 +4,24 @@ using System.IO.Ports;
 
 public class ArduinoControl : MonoBehaviour {
 
-	SerialPort Puerto = new SerialPort ("COM3", 115200);
+
 	public float Speed = 5f, HighSpeed = 5f;
+	public Unzipper unzip = new Unzipper ();
 
 	// Use this for initialization
-	void Start () {
-		Puerto.Open();
+	void Start () 
+	{
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		Puerto.ReadTimeout = 25;
-		if (Puerto.IsOpen) 
-		{
-			transform.Translate(Vector3.right * Speed * Time.deltaTime);
-			try 
-			{
-				Debug.Log( Puerto.ReadLine() );
-				SpeedChanger();
-				HighChanger( Puerto.ReadByte() );
-			}
-			catch(System.Exception)
-			{
-
-			}
-		}
-	}
-	public void SpeedChanger()
+	void Update () 
 	{
-		int Temp = Puerto.ReadByte ();
+		SpeedChanger( unzip.values[0]);
+		HighChanger( unzip.values[2] );
+	}
+	public void SpeedChanger(int Temp)
+	{
 		if (Temp == 3) {
 			Speed = 8f;
 		} else if (Temp == 1) {
@@ -52,4 +41,8 @@ public class ArduinoControl : MonoBehaviour {
 			transform.Translate(Vector3.down * HighSpeed * Time.deltaTime);
 		}
 	}
+
+
+
+
 }

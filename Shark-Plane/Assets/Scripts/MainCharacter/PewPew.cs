@@ -18,7 +18,7 @@ public class PewPew : MonoBehaviour {
 	void Update () 
 	{
 
-		if (Input.GetKey (KeyCode.Space)) 
+		if () 
 		{
 			CrearBala();
 

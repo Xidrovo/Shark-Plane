@@ -19,11 +19,16 @@ public class KeyboardControl : MonoBehaviour {
 
 	public void Movement()
 	{
-			if (Input.GetKey (KeyCode.RightArrow)) {
+			if (Input.GetKey (KeyCode.RightArrow)) 
+			{
 				Speed = AtributosGenerales.Speed + AtributosGenerales.Aumento;
-			} else if (Input.GetKey (KeyCode.LeftArrow) && ColliderController.RegularSpeed == false) {
+			} 
+			else if (Input.GetKey (KeyCode.LeftArrow) && ColliderController.RegularSpeed == false) 
+			{
 				Speed = AtributosGenerales.Speed - AtributosGenerales.Aumento;
-			} else {
+			} 
+			else 
+			{
 				Speed = AtributosGenerales.Speed;
 			}
 	}
