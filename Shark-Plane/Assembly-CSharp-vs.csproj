@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Tutorial\Testo.cs" />
      <Compile Include="Assets\Scripts\Villanos\Ataques.cs" />
      <Compile Include="Assets\Scripts\Villanos\Atributos.cs" />
+     <Compile Include="Assets\Scripts\Villanos\Fundamuertos.cs" />
      <Compile Include="Assets\Scripts\Villanos\Mexistor.cs" />
      <Compile Include="Assets\Scripts\Villanos\UnPolitecnical.cs" />
  <Reference Include="UnityEngine.UI">
