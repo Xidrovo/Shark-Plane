@@ -24,11 +24,6 @@ public class explosion : MonoBehaviour {
 	}
 	public void OnTriggerExit(Collider col)
 	{
-		
-		if (col.gameObject.name.Equals("Main Camera")) 
-		{
-
-		}
 		Destroy(this.gameObject);
 	}
 }
