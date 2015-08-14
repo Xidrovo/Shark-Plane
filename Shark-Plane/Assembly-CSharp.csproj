@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AtributosGenerales.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\ColliderController.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\ArduinoControl.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\KeyboardControl.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\PewPew.cs" />
