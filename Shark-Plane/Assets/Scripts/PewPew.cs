@@ -27,7 +27,7 @@ public class PewPew : MonoBehaviour {
 	}
 	public void CrearBala()
 	{
-		nuevo=(GameObject)Instantiate ((GameObject)prefab1,new Vector3(player.transform.position.x,player.transform.position.y,0),rotacion);
+		nuevo=(GameObject)Instantiate ((GameObject)prefab1,new Vector3(player.transform.position.x + 0.4f ,player.transform.position.y - 0.25f,-1),rotacion);
 		nuevo.GetComponent<Rigidbody> ().AddRelativeForce ((new Vector2 (speed, 0)), ForceMode.Impulse);
 
 	}
