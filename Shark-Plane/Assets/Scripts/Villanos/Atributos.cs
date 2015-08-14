@@ -4,6 +4,6 @@ using System.Collections;
 public class Atributos : MonoBehaviour {
 
 	// Use this for initialization
-	public float Speed=6f, vida;
-
+	public float Speedy=6f, Speedx = AtributosGenerales.Speed/2, vida;
+	public float AlturaMax, Rango;
 }
