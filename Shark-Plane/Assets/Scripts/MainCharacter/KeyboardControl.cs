@@ -2,9 +2,8 @@
 using System.Collections;
 
 public class KeyboardControl : MonoBehaviour {
-
-	public float Speed = 5f, HighSpeed = 5f;
-
+	
+	private float Speed = AtributosGenerales.Speed;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,25 +19,25 @@ public class KeyboardControl : MonoBehaviour {
 
 	public void Movement()
 	{
-		if (Input.GetKey (KeyCode.RightArrow)) {
-			Speed = 8f;
-		} else if (Input.GetKey (KeyCode.LeftArrow)) {
-			Speed = 3f;
-		} else {
-			Speed = 5f;
-		}
+			if (Input.GetKey (KeyCode.RightArrow)) {
+				Speed = AtributosGenerales.Speed + AtributosGenerales.Aumento;
+			} else if (Input.GetKey (KeyCode.LeftArrow) && ColliderController.RegularSpeed == false) {
+				Speed = AtributosGenerales.Speed - AtributosGenerales.Aumento;
+			} else {
+				Speed = AtributosGenerales.Speed;
+			}
 	}
 
 	public void HighAndLow()
 	{
 		if (Input.GetKey (KeyCode.UpArrow)) 
 		{
-			transform.Translate (Vector3.up * HighSpeed * Time.deltaTime);
+			transform.Translate (Vector3.up * AtributosGenerales.HighSpeed * Time.deltaTime);
 		}
 
 		if (Input.GetKey (KeyCode.DownArrow)) 
 		{
-			transform.Translate (Vector3.down * HighSpeed * Time.deltaTime);
+			transform.Translate (Vector3.down * AtributosGenerales.HighSpeed * Time.deltaTime);
 		}
 	}
 }
