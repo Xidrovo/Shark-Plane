@@ -6,10 +6,18 @@ public class Unzipper : MonoBehaviour {
 
 	// Use this for initialization
 	SerialPort Puerto = new SerialPort ("COM3", 115200);
-	public int[] values= new int[3];
+	public string[] values = new string[3];
+
 	void Start () 
 	{
-		Puerto.Open();
+		try{
+			Puerto.Open();
+		}catch(System.Exception e)
+		{
+			values [0] = "0";
+			values [1] = "0";
+			values [2] = "0";
+		}
 	}
 	
 	// Update is called once per frame
@@ -18,22 +26,19 @@ public class Unzipper : MonoBehaviour {
 		Puerto.ReadTimeout = 25;
 		if (Puerto.IsOpen) 
 		{
-			transform.Translate(Vector3.right * Speed * Time.deltaTime);
 			try 
 			{
-				values=UnzipMessage(Puerto.ReadLine());
-
+				UnzipMessage(Puerto.ReadLine());
+//				Debug.Log (values[0] + "--" + values[1] + "--" + values[2]);
 			}
 			catch(System.Exception)
 			{
 				
 			}
 		}
-	
 	}
-	public int[] UnzipMessage(string value)
+	public void UnzipMessage(string value)
 	{
-		values = (int)value.Split ("-");
-		
+		values = value.Split ('-');
 	}
 }

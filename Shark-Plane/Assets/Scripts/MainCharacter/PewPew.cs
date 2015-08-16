@@ -5,6 +5,7 @@ public class PewPew : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject player, prefab1;
+	public Unzipper unzipper;
 	private float speed=40f;
 	private GameObject nuevo;
 	public Quaternion rotacion= Quaternion.Euler(0,0,0);
@@ -18,10 +19,9 @@ public class PewPew : MonoBehaviour {
 	void Update () 
 	{
 
-		if () 
+		if (unzipper.values[1] == "9" || Input.GetKey(KeyCode.Space)) 
 		{
 			CrearBala();
-
 		}
 		
 	}

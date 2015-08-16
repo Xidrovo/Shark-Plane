@@ -7,7 +7,6 @@ public class ColliderController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D Trigg)
 	{
-		Debug.Log (Trigg.gameObject.name);
 		if (Trigg.gameObject.name == "Tiburion") {
 			RegularSpeed = true;
 		}

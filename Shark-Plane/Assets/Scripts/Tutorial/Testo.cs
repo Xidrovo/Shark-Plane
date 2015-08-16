@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class Testo : MonoBehaviour {
 
 	private Text testo;
-	public static int Controlador = 0;
+	private int SubControl = 0, Controlador = 0;
+	public Unzipper unzip;
 
 	void Start()
 	{
@@ -13,9 +14,99 @@ public class Testo : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (Controlador > 0) 
+
+		//aqui va la parte del tutorial de la aceleracion
+		if (Controlador == 1) 
 		{
-			//Comenzar la rutina del tutorial.
+			if (SubControl == 0)
+			{
+				if (Input.GetKey(KeyCode.RightArrow) || unzip.values[0] == "3")
+				{
+					testo.text = "¡Bien!, ahora muevelo al otro lado";
+					SubControl = 1;
+				}
+			}
+
+			if (SubControl >= 1 && SubControl < 250 )
+			{
+				if (Input.GetKey(KeyCode.LeftArrow) || unzip.values[0] == "1")
+				{
+					testo.text = "¡Bien!, ahora aprendamos a subir";
+				}
+				SubControl++;
+				Debug.Log (SubControl);
+			}
+
+			if (SubControl >= 250)
+			{
+				testo.text = "Apunta con tu brazo hacia arriba";
+				Controlador = 2;
+				SubControl = 0;
+			}
+		}
+
+		//Aqui va la parte del tutorial de el "High And Low"
+		if (Controlador == 2) 
+		{
+			if (SubControl == 0)
+			{
+				if(Input.GetKey(KeyCode.UpArrow) || unzip.values[2] == "4")
+				{	
+					testo.text = "¡Bien hecho!, prueba apuntando hacia abajo";
+					SubControl = 1;
+				}
+			}
+			if (SubControl >= 1 && SubControl < 250)
+			{
+				if (Input.GetKey(KeyCode.DownArrow) || unzip.values[2] == "6")
+				{
+					testo.text = "¡Ya estamos cerca del final!";
+				}
+
+				SubControl++;
+			}
+
+			if (SubControl >= 250 && SubControl < 500)
+			{
+				testo.text = "A lo largo de tu aventura encontraras peligro";
+				SubControl++;
+			}
+
+			if(SubControl >= 500 && SubControl < 750)
+			{
+				testo.text = "Para eso aprenderas a enfrentarte a ellos";
+				SubControl++;
+			}
+
+			if(SubControl >= 750)
+			{
+				testo.text = "Tapa la parte frontal de tu celular";
+				Controlador = 3;
+				SubControl = 0;
+			}
+		}
+
+		if (Controlador == 3) 
+		{
+			if (SubControl == 0)
+			{
+				Debug.Log ("Aqui toy~");
+				if (Input.GetKey(KeyCode.Space) || unzip.values[1] == "9")
+				{
+					SubControl = 1;
+				}
+			}
+
+			if (SubControl >= 1)
+			{
+				testo.text = "¡Felicidades!, ahora podras comenzar!";
+				SubControl++;
+			}
+
+			if (SubControl >= 250)
+			{
+				Application.LoadLevel ("Pre");
+			}
 		}
 	}
 
@@ -41,6 +132,8 @@ public class Testo : MonoBehaviour {
 		testo.text = "Vamos, trata de moverte hacia al frente";
 		yield return new WaitForSeconds(2);
 		testo.text = "Solo mueve el deslizador hacia al frente";
+		yield return new WaitForSeconds(2);
+		Controlador = 1;
 		yield break;
 		Debug.Log ("You'll never see this"); // produces a dead code warning
 	}
