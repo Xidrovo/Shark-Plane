@@ -16,12 +16,12 @@ public class UnPolitecnical : MonoBehaviour {
 	void Update () {
 		if (Subir) {
 			BottomUp();
-			if((int)(this.gameObject.transform.position.y)==(int)(atri.AlturaMax)){
+			if(this.gameObject.transform.position.y >= atri.AlturaMax){
 				Subir = false;
 			}
 		} else {
 			TopDown();
-			if((int)(this.gameObject.transform.position.y)==(int)(atri.AlturaMax-atri.Rango)){
+			if(this.gameObject.transform.position.y <= atri.AlturaMax-atri.Rango){
 				Subir = true;
 			}
 		}
