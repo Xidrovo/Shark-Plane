@@ -21,12 +21,12 @@ public class Fundamuertos : MonoBehaviour {
 		} else {
 			if (Subir) {
 				BottomUp ();
-				if ((int)(this.gameObject.transform.position.y) == (int)(atri.AlturaMax)) {
+				if ((int)(this.gameObject.transform.position.y) >= (int)(atri.AlturaMax)) {
 					Subir = false;
 				}
 			} else {
 				TopDown ();
-				if ((int)(this.gameObject.transform.position.y) == (int)(atri.AlturaMax - atri.Rango)) {
+				if ((int)(this.gameObject.transform.position.y) <= (int)(atri.AlturaMax - atri.Rango)) {
 					Subir = true;
 				}
 			}
