@@ -4,7 +4,10 @@ using System.Collections;
 public class muerteJug : MonoBehaviour {
 
 	// Use this for initialization
-	private int bd=0;
+	private int bd = 0, i = 0;
+	public GameObject Resurrect;
+	private bool ResDelay = false;
+
 	void Start () {
 	
 	}
@@ -14,28 +17,24 @@ public class muerteJug : MonoBehaviour {
 	{
 		if (bd == 1) 
 		{
-			this.gameObject.SetActive(false);
-			bd=0;
+			bd = 0;
+			this.transform.position = Resurrect.transform.position;
 		}
-		for (int i=0; i<10; i++) 
-		{
-			if((i+1)==10)
-			{
-				this.gameObject.SetActive(true);
-			}
-		}
-	
 	}
 
 	public void OnTriggerEnter2D(Collider2D col)
 	{
-		if (!col.gameObject.CompareTag ("Bala") ) 
+		if (!col.gameObject.CompareTag ("Bala") && !col.gameObject.CompareTag ("BalaEne") ) 
 		{
-			bd=1;
+			bd = 1;
 			//bajar vida
 
-		}
-		
+		}	
+	}
+
+	public void Kill()
+	{
+		bd = 1;
 	}
 
 

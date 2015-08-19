@@ -7,14 +7,14 @@ public class ColliderController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D Trigg)
 	{
-		if (Trigg.gameObject.name == "Tiburion") {
+		if (Trigg.gameObject.tag == "Player") {
 			RegularSpeed = true;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D Trigg)
 	{
-		if (Trigg.name == "Tiburion") {
+		if (Trigg.tag == "Player") {
 			RegularSpeed = false;
 		}
 	}
