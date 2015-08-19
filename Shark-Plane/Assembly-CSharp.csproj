@@ -59,11 +59,13 @@
      <Compile Include="Assets\Scripts\MainCharacter\exploJuga.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\explosion.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\muerteJug.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Tutorial\Instrucciones.cs" />
      <Compile Include="Assets\Scripts\Tutorial\Testo.cs" />
      <Compile Include="Assets\Scripts\Unzipper.cs" />
      <Compile Include="Assets\Scripts\Villanos\Ataques.cs" />
      <Compile Include="Assets\Scripts\Villanos\Atributos.cs" />
+     <Compile Include="Assets\Scripts\Villanos\ESPOLATOR\Stop.cs" />
      <Compile Include="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs" />
      <Compile Include="Assets\Scripts\Villanos\Fundamuertos.cs" />
      <Compile Include="Assets\Scripts\Villanos\Mexistor.cs" />

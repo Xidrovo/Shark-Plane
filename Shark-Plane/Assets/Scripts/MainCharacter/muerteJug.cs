@@ -22,15 +22,6 @@ public class muerteJug : MonoBehaviour {
 		}
 	}
 
-	public void OnTriggerEnter2D(Collider2D col)
-	{
-		if (!col.gameObject.CompareTag ("Bala") && !col.gameObject.CompareTag ("BalaEne") ) 
-		{
-			bd = 1;
-			//bajar vida
-
-		}	
-	}
 
 	public void Kill()
 	{
