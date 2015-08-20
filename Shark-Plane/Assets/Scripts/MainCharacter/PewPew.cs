@@ -7,6 +7,7 @@ public class PewPew : MonoBehaviour {
 	public GameObject player, prefab1;
 	public Unzipper unzipper;
 	private float speed=40f;
+	private int i = 0;
 	private GameObject nuevo;
 	public Quaternion rotacion= Quaternion.Euler(0,0,0);
 	void Start () 
@@ -18,12 +19,18 @@ public class PewPew : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-
-		if (unzipper.values[1] == "9" || Input.GetKey(KeyCode.Space)) 
+		i++;
+		if(!(i>10 && i<20)&& ((i%10)==0))
 		{
-			CrearBala();
+			if (unzipper.values[1] == "9" || Input.GetKey(KeyCode.Space)) 
+			{
+				CrearBala();
+			}
 		}
-		
+		if(i==40)
+		{
+			i=0;
+		}
 	}
 	public void CrearBala()
 	{
