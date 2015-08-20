@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LifeController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Villanos\Ataques.cs">
     <Files>
+      <File FileName="Assets\Scripts\Villanos\Ataques.cs" Line="14" Column="17" />
       <File FileName="Assets\Scripts\Bullets And Specials\BulletTributes.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MainCharacter\ArduinoControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Unzipper.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MainCharacter\PewPew.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainCharacter\explosion.cs" Line="12" Column="4" />
+      <File FileName="Assets\Scripts\MainCharacter\explosion.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LifeController.cs" Line="75" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
