@@ -10,7 +10,21 @@ public class Atributos : MonoBehaviour {
 	public float AlturaMax, Rango, Speed=25f;
 	public Score score;
 
-	public void Update()
+	void Start()
+	{
+		Physics2D.IgnoreLayerCollision (8, 9, true);
+	}
+
+	void OnCollisionExit2D(Collision2D coll)
+	{
+		Debug.Log (coll.gameObject.tag);
+		if (coll.gameObject.tag == "MainCamera") 
+		{
+			Destroy(this.gameObject);
+		}
+	}
+
+	void Update()
 	{
 		if(vida==0)
 		{

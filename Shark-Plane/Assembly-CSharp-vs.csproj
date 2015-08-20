@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Bullets And Specials\BulletTributes.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\ColliderController.cs" />
+     <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\LifeController.cs" />
      <Compile Include="Assets\Scripts\Looper.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\ArduinoControl.cs" />
