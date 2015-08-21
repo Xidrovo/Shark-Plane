@@ -7,8 +7,8 @@ public class ataqBoss : MonoBehaviour {
 	private GameObject nuevo;
 	public Quaternion rotacion = Quaternion.Euler(0,0,0);
 	private Atributos Temp;
-	private int i=0, cont=0;
-	private int rand, rand2;
+	private int i=0, cont=0, cont2=0;
+	private int rand, rand2, randAtaq;
 	private GameObject shark;
 	// Use this for initialization
 	void Start () {
@@ -17,30 +17,121 @@ public class ataqBoss : MonoBehaviour {
 		shark = GameObject.FindWithTag("Player");
 		rand2=Random.Range (4, 5);
 		rand = rand2*Random.Range (1, 3);
-
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		if (SharkCerca ()) 
+		//if (SharkCerca ()) 
 		{
 			i++;
-			if((i%10)==0)
+			if(this.GetComponent<Atributos>().vida==0)
 			{
-				SenDisp ();
-
+				AtaqueFinal(i);
 			}
-			if((i%5)==0)
+			if((i%40)==0)
 			{
-				cont++;
-				ArribaDisp();
+				randAtaq = Random.Range (1, 3);
+			}
+
+			switch(randAtaq)
+			{
+				case 1:
+				{
+					AtaqueCruz(i);
+					break;
+				}
+				case 2:
+				{
+
+					break;
+				}
+				case 3:
+				{
+
+					break;
+				}
 			}
 			if(i==40)
 			{
 				i=0;
 			}
 
+		}
+
+	}
+
+	public void AtaqueCruz(int i)
+	{
+		cont2++;
+		if (cont2 == 100) 
+		{
+			cont2=0;
+		}
+		if((i%5)==0)
+		{
+			if( cont2<20)
+			{
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,8f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, -5f)), ForceMode2D.Impulse);
+				
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,-1.5f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 5f)), ForceMode2D.Impulse);
+			}
+			else if(cont2 >=20 && cont2<=40)
+			{
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,7.5f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 0)), ForceMode2D.Impulse);
+				
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,-1f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 0)), ForceMode2D.Impulse);
+
+			}
+			else if(cont2 >=60 && cont2<=80)
+			{
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x-10,8f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, -5f)), ForceMode2D.Impulse);
+				
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x-10,-1.5f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 5f)), ForceMode2D.Impulse);
+				
+			}
+			else
+			{
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,5.5f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 0)), ForceMode2D.Impulse);
+				
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,1f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 0)), ForceMode2D.Impulse);
+				
+				nuevo = (GameObject)Instantiate (prefab2, new Vector3(villano.transform.position.x,3f,0), rotacion);
+				nuevo.GetComponent<Rigidbody2D>().gravityScale=0;
+				nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce ((new Vector2 (-10f, 0)), ForceMode2D.Impulse);
+			}
+
+		}
+	}
+
+	public void AtaqueFinal(int i)
+	{
+
+		if((i%10)==0)
+		{
+			SenDisp ();
+			
+		}
+		if((i%5)==0)
+		{
+			cont++;
+			ArribaDisp();
 		}
 
 	}
