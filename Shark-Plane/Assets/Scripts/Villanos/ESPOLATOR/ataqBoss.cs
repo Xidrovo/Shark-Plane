@@ -7,11 +7,12 @@ public class ataqBoss : MonoBehaviour {
 	private GameObject nuevo;
 	public Quaternion rotacion = Quaternion.Euler(0,0,0);
 	private Atributos Temp;
-	private int i=0, cont=0, cont2=0;
-	private int rand, rand2, randAtaq=2;
+	private int i = 0, cont=0, cont2=0;
+	private int rand, rand2, randAtaq = 1;
 	private GameObject shark;
 	private bool Subir, Comienzo, Focus;
 	// Use this for initialization
+
 	void Start () {
 		Subir = true;
 		Comienzo = true;
@@ -29,36 +30,36 @@ public class ataqBoss : MonoBehaviour {
 		//if (SharkCerca ()) 
 		{
 			i++;
-			if(this.GetComponent<Atributos>().vida<5)
+			Debug.Log(i);
+			if (this.GetComponent<Atributos> ().vida < 5) {
+				AtaqueFinal (i);
+			} else 
 			{
-				AtaqueFinal(i);
-			}
-			switch(randAtaq)
-			{
+				switch (randAtaq) {
 				case 1:
-				{
-					AtaqueCruz(i);
-					break;
-				}
+					{
+						AtaqueCruz (i);
+						break;
+					}
 				case 2:
-				{
-					AtaqueCabeza();
-					break;
+					{
+	//				Debug.Log ("Loooco!");
+						AtaqueCabeza ();
+						break;
+					}
 				}
-			}
-			if(i==40)
-			{
-				i=0;
-				if(randAtaq==1)
-				{
-					randAtaq=2;
+				if (i >= 40) {
+					i = 0;
+					Debug.Log ("Aqui toy~");
+					if (randAtaq == 1) {
+						Debug.Log ("Entre");
+						randAtaq = 2;
+					} else {
+						randAtaq = 1;
+					}
 				}
-				else
-				{
-					rand2=1;
-				}
-			}
 
+			}
 		}
 
 	}
