@@ -1,14 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Villanos\Fundamuertos.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Villanos\ESPOLATOR\Stop.cs">
     <Files>
-      <File FileName="Assets\Scripts\Villanos\Mexistor.cs" Line="40" Column="90" />
+      <File FileName="Assets\Scripts\Villanos\Mexistor.cs" Line="72" Column="1" />
       <File FileName="Assets\Scripts\Villanos\atribCueva.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Villanos\Atributos.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\Fundamuertos.cs" Line="30" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\UnPolitecnical.cs" Line="35" Column="89" />
+      <File FileName="Assets\Scripts\Villanos\Fundamuertos.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Villanos\UnPolitecnical.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LifeController.cs" Line="91" Column="4" />
+      <File FileName="Assets\Scripts\MainCharacter\explosion.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\BossLife.cs" Line="15" Column="49" />
+      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\Stop.cs" Line="20" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

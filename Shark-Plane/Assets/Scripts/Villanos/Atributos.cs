@@ -5,13 +5,13 @@ public class Atributos : MonoBehaviour {
 
 	// Use this for initialization
 	public float Speedy=6f, Speedx = AtributosGenerales.Speed/2, vida=1f;
-	public int Puntos = 50;
+	public int Puntos = 50, Temp = 0;
 	public float AlturaMax, Rango, Speed=25f;
 	public Score score;
 	private GameObject nuevo;
 	private Quaternion rotation= Quaternion.Euler(0,0,0);
 	public GameObject Tcred;
-	public GameObject prefabVida;
+	public GameObject prefabVida, PastelChino;
 	void Start()
 	{
 		Physics2D.IgnoreLayerCollision (8, 9, true);
@@ -29,13 +29,6 @@ public class Atributos : MonoBehaviour {
 	{
 		if(vida==0)
 		{
-			int rand=Random.Range(1,10);
-			{
-				if(rand==2)
-				{
-					//CrearVida();
-				}
-			}
 			Destroy(this.gameObject);
 		}
 	}
@@ -53,6 +46,17 @@ public class Atributos : MonoBehaviour {
 					Instantiate(Tcred,new Vector3(0,0,0),Quaternion.Euler(0,0,0));
 				}
 				score.ActualizarTexto((int)Puntos);
+				int Temp = Random.Range(0,100);
+				if (Temp <= 20)
+				{
+					if (Temp <= 8)
+					{
+						Instantiate(prefabVida,this.transform.position,Quaternion.Euler(0,0,0));
+					}else
+					{
+						Instantiate(PastelChino,this.transform.position,Quaternion.Euler(0,0,0));
+					}
+				}
 				Destroy(this.gameObject);
 			}
 		}

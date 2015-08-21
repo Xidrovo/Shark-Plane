@@ -58,9 +58,11 @@ public class LifeController : MonoBehaviour {
 			if (LifeArray [0] == 0f) {
 				Vida1.fillAmount = 0f;
 				CurrentLife = 200f;
+				LifeArray [0] = 1;
 			} else if (LifeArray [1] == 0f) {
 				Vida2.fillAmount = 0f;
 				CurrentLife = 100f;
+				LifeArray[1] = 1;
 			} else {
 				//GameOver
 				Vida3.fillAmount = 0.2f;
@@ -73,11 +75,18 @@ public class LifeController : MonoBehaviour {
 				Vida2.fillAmount = Vida3.fillAmount;
 				Vida3.fillAmount = 1f;
 				CurrentLife = CurrentLife + 100f;
+				LifeArray[1] = 0;
 			} else if ( Vida1.fillAmount == 0f)
 			{
 				Vida1.fillAmount = Vida2.fillAmount;
 				Vida2.fillAmount = 1f;
 				CurrentLife = CurrentLife + 100f;
+				LifeArray[0] = 0;
+			}else
+			{
+				Vida1.fillAmount = 1f;
+				CurrentLife = 300f;
+				LifeArray[0] = 0;
 			}
 		}
 	}
