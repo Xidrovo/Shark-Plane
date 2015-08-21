@@ -30,6 +30,7 @@ public class LifeController : MonoBehaviour {
 			}
 
 		} else if (CurrentLife > 100) {
+			Vida1.fillAmount = 0;
 			Vida2.fillAmount = (float)(CurrentLife - 100) / 100f;
 
 			if (Vida2.fillAmount <= 0.05f)
@@ -39,6 +40,7 @@ public class LifeController : MonoBehaviour {
 				Death.Kill();
 			}
 		} else {
+			Vida2.fillAmount = 0;
 			Vida3.fillAmount = (float) (CurrentLife / 100f);
 			//Hacer Game Over
 		}

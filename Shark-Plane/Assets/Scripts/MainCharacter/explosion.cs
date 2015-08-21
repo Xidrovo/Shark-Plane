@@ -10,7 +10,6 @@ public class explosion : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Enemy") 
 		{
-			Debug.Log ("asdadlkjdalsdja");
 			Death.Kill();
 			Controlador.LifeUpgrade(false);
 		}
