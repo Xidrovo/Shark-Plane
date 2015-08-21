@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: e907d7fcc8c097e499c2e57c09c89092
-timeCreated: 1439521040
+timeCreated: 1440134870
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - score: {instanceID: 0}
+  - Tcred: {fileID: 139606, guid: 5c607007ef2393a45b74ea94da7ac44c, type: 2}
+  - prefabVida: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -9,7 +9,8 @@ public class Atributos : MonoBehaviour {
 	public float AlturaMax, Rango, Speed=25f;
 	public Score score;
 	private GameObject nuevo;
-	private Quaternion rotacion=Quaternion.Euler(0,0,0);
+	private Quaternion rotation= Quaternion.Euler(0,0,0);
+	public GameObject Tcred;
 	public GameObject prefabVida;
 	void Start()
 	{
@@ -18,7 +19,6 @@ public class Atributos : MonoBehaviour {
 
 	void OnCollisionExit2D(Collision2D coll)
 	{
-		Debug.Log (coll.gameObject.tag);
 		if (coll.gameObject.tag == "MainCamera") 
 		{
 			Destroy(this.gameObject);
@@ -46,8 +46,12 @@ public class Atributos : MonoBehaviour {
 		{
 			vida--;
 			Destroy(col.gameObject);
-			if (vida == 0) 
+			if (vida <= 0) 
 			{
+				if(this.gameObject.name.Equals("Espolator3000"))
+				{
+					Instantiate(Tcred,new Vector3(0,0,0),Quaternion.Euler(0,0,0));
+				}
 				score.ActualizarTexto((int)Puntos);
 				Destroy(this.gameObject);
 			}
@@ -56,7 +60,7 @@ public class Atributos : MonoBehaviour {
 	}
 	public void CrearVida()
 	{
-		nuevo = (GameObject)Instantiate (prefabVida,this.gameObject.transform.position, rotacion);
+		nuevo = (GameObject)Instantiate (prefabVida,this.gameObject.transform.position, rotation);
 	}
 
 }

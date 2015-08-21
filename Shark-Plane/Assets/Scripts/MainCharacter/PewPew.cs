@@ -20,7 +20,7 @@ public class PewPew : MonoBehaviour {
 	void Update () 
 	{
 		i++;
-		if(!(i>10 && i<20)&& ((i%10)==0))
+		if(!(i>10 && i<20)&& ((i%9)==0))
 		{
 			if (unzipper.values[1] == "9" || Input.GetKey(KeyCode.Space)) 
 			{
