@@ -10,8 +10,12 @@ public class ataqBoss : MonoBehaviour {
 	private int i=0, cont=0, cont2=0;
 	private int rand, rand2, randAtaq;
 	private GameObject shark;
+	private bool Subir, Comienzo, Focus;
 	// Use this for initialization
 	void Start () {
+		Subir = true;
+		Comienzo = true;
+		Focus = false;
 		Temp = this.GetComponent<Atributos> ();
 		villano = this.gameObject;
 		shark = GameObject.FindWithTag("Player");
@@ -200,6 +204,49 @@ public class ataqBoss : MonoBehaviour {
 			nuevo.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2 (0, 22.5f), ForceMode2D.Impulse);
 
 
+		}
+	}
+
+	void AtaqueCabeza(){
+		if (Subir && Comienzo) {
+			transform.Translate (Vector3.up * Temp.Speedx * Time.deltaTime);
+			if (villano.transform.position.y > 5f) {
+				Subir = false;
+			}
+		} else if (!Subir && Comienzo) {
+			transform.Translate (Vector3.down * Temp.Speedx * Time.deltaTime);
+			if (villano.transform.position.y < -6f) {
+				Subir = true;
+				Comienzo = false;
+			}
+		} else if (Subir && !Comienzo) {
+			if(!Focus){
+				if((int)(villano.transform.position.x)!=(int)(shark.transform.position.x)){
+					if((int)(villano.transform.position.x)>(int)(shark.transform.position.x)){
+						transform.Translate (Vector3.left * Temp.Speedx * Time.deltaTime);
+					}else if((int)(villano.transform.position.x)<(int)(shark.transform.position.x)){
+						transform.Translate (Vector3.right * Temp.Speedx * Time.deltaTime);
+					}
+				}
+				if((int)(villano.transform.position.x)==(int)(shark.transform.position.x))Focus = true;
+			}else{
+				transform.Translate (Vector3.up * Temp.Speedy * Time.deltaTime);
+			}
+			if (villano.transform.position.y > 13f) {
+				Subir = false;
+			}
+		} else if (!Subir && !Comienzo) {
+			if((int)(villano.transform.position.x)!=390){
+				transform.Translate (Vector3.right * Temp.Speedx * Time.deltaTime);
+			}
+			if(villano.transform.position.y > 4f){
+				transform.Translate (Vector3.down * Temp.Speedy * Time.deltaTime);
+			}
+			if((int)(villano.transform.position.y)== 4){
+				Subir= true;
+				Comienzo = true;
+				Focus = false;
+			}
 		}
 	}
 }
