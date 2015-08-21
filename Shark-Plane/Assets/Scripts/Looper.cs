@@ -28,10 +28,8 @@ public class Looper : MonoBehaviour {
 				Tomp = -2;
 			}
 			Relative.z = 0;
-			Debug.Log(WordSpace.transform.position);
 			Camara.transform.position = Temp;
 			MainCharacter.transform.position = Relative;
-			Debug.Log(Relative);
 			Tomp++;
 		}
 	}

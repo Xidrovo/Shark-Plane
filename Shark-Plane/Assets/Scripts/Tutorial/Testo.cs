@@ -34,7 +34,6 @@ public class Testo : MonoBehaviour {
 					testo.text = "¡Bien!, ahora aprendamos a subir";
 				}
 				SubControl++;
-				Debug.Log (SubControl);
 			}
 
 			if (SubControl >= 250)
@@ -90,7 +89,6 @@ public class Testo : MonoBehaviour {
 		{
 			if (SubControl == 0)
 			{
-				Debug.Log ("Aqui toy~");
 				if (Input.GetKey(KeyCode.Space) || unzip.values[1] == "9")
 				{
 					SubControl = 1;
@@ -125,13 +123,13 @@ public class Testo : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		testo.text = "Ahora aprendamos los controles basicos";
 		yield return new WaitForSeconds(2);
-		testo.text = "¿Ves ese deslizador en el celular?";
+		testo.text = "El primero que aprenderas sera de suma importancia";
 		yield return new WaitForSeconds(2);
 		testo.text = "Con el podras cambiar tu velocidad";
 		yield return new WaitForSeconds(2);
 		testo.text = "Vamos, trata de moverte hacia al frente";
 		yield return new WaitForSeconds(2);
-		testo.text = "Solo mueve el deslizador hacia al frente";
+		testo.text = "Solo gira tu muñeca hacia al frente";
 		yield return new WaitForSeconds(2);
 		Controlador = 1;
 		yield break;
