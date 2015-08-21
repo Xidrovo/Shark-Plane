@@ -12,9 +12,9 @@ public class CosSen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(this.gameObject.transform.position.y <= -0.006f)
+		if(this.gameObject.transform.position.y <= -1.106f)
 		{
-			prefab.GetComponent<Rigidbody2D>().AddRelativeForce((new Vector2(-3,10f)), ForceMode2D.Impulse);
+			prefab.GetComponent<Rigidbody2D>().AddRelativeForce((new Vector2(-0.5f,9.5f)), ForceMode2D.Impulse);
 			//Destroy(this.gameObject);
 		}
 	

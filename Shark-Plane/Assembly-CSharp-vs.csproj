@@ -62,7 +62,6 @@
      <Compile Include="Assets\Scripts\MainCharacter\exploJuga.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\explosion.cs" />
      <Compile Include="Assets\Scripts\MainCharacter\muerteJug.cs" />
-     <Compile Include="Assets\Scripts\RandEne.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Tutorial\Instrucciones.cs" />
      <Compile Include="Assets\Scripts\Tutorial\Testo.cs" />
