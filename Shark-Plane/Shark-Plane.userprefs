@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Villanos\Fundamuertos.cs">
     <Files>
-      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs" Line="58" Column="16" />
+      <File FileName="Assets\Scripts\Villanos\Mexistor.cs" Line="40" Column="90" />
+      <File FileName="Assets\Scripts\Villanos\atribCueva.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Villanos\Atributos.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Villanos\Fundamuertos.cs" Line="30" Column="1" />
+      <File FileName="Assets\Scripts\Villanos\UnPolitecnical.cs" Line="35" Column="89" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -19,7 +19,7 @@ public class Atributos : MonoBehaviour {
 
 	void OnCollisionExit2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "MainCamera") 
+		if (coll.gameObject.tag == "Destroyer") 
 		{
 			Destroy(this.gameObject);
 		}
