@@ -8,7 +8,7 @@ public class ataqBoss : MonoBehaviour {
 	public Quaternion rotacion = Quaternion.Euler(0,0,0);
 	private Atributos Temp;
 	private int i=0, cont=0, cont2=0;
-	private int rand, rand2, randAtaq;
+	private int rand, rand2, randAtaq=2;
 	private GameObject shark;
 	private bool Subir, Comienzo, Focus;
 	// Use this for initialization
@@ -24,41 +24,39 @@ public class ataqBoss : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	void Update () 
 	{
 		//if (SharkCerca ()) 
 		{
 			i++;
-			if(this.GetComponent<Atributos>().vida==0)
+			if(this.GetComponent<Atributos>().vida<5)
 			{
 				AtaqueFinal(i);
 			}
-			if((i%100)==0)
-			{
-				randAtaq = Random.Range (1, 3);
-			}
-
 			switch(randAtaq)
 			{
-				case 2:
-				{
-					
-					break;
-				}
-				case 3:
-				{
-					
-					break;
-				}
-				default:
+				case 1:
 				{
 					AtaqueCruz(i);
+					break;
+				}
+				case 2:
+				{
+					AtaqueCabeza();
 					break;
 				}
 			}
 			if(i==40)
 			{
 				i=0;
+				if(randAtaq==1)
+				{
+					randAtaq=2;
+				}
+				else
+				{
+					rand2=1;
+				}
 			}
 
 		}
