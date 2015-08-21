@@ -49,7 +49,15 @@
      <Compile Include="Assets\Scripts\AtributosGenerales.cs" />
      <Compile Include="Assets\Scripts\Bullets And Specials\BulletTributes.cs" />
      <Compile Include="Assets\Scripts\Bullets And Specials\CosSen.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\Ataques.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\Atributos.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\ESPOLATOR\Stop.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\ESPOLATOR\ataqBoss.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\Fundamuertos.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\Mexistor.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\Villanos\UnPolitecnical.cs" />
      <Compile Include="Assets\Scripts\Bullets And Specials\alturaMax.cs" />
+     <Compile Include="Assets\Scripts\Bullets And Specials\explo.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\ColliderController.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
@@ -66,13 +74,6 @@
      <Compile Include="Assets\Scripts\Tutorial\Instrucciones.cs" />
      <Compile Include="Assets\Scripts\Tutorial\Testo.cs" />
      <Compile Include="Assets\Scripts\Unzipper.cs" />
-     <Compile Include="Assets\Scripts\Villanos\Ataques.cs" />
-     <Compile Include="Assets\Scripts\Villanos\Atributos.cs" />
-     <Compile Include="Assets\Scripts\Villanos\ESPOLATOR\Stop.cs" />
-     <Compile Include="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs" />
-     <Compile Include="Assets\Scripts\Villanos\Fundamuertos.cs" />
-     <Compile Include="Assets\Scripts\Villanos\Mexistor.cs" />
-     <Compile Include="Assets\Scripts\Villanos\UnPolitecnical.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
