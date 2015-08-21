@@ -44,6 +44,9 @@ public class LifeController : MonoBehaviour {
 			Vida3.fillAmount = (float) (CurrentLife / 100f);
 			//Hacer Game Over
 		}
+		if (CurrentLife == 0) {
+			Application.LoadLevel("gameover");
+		}
 	}
 
 	//Si "Accion == true", entonces gana una vida.
