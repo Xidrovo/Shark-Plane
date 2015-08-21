@@ -29,26 +29,26 @@ public class ataqBoss : MonoBehaviour {
 			{
 				AtaqueFinal(i);
 			}
-			if((i%40)==0)
+			if((i%100)==0)
 			{
 				randAtaq = Random.Range (1, 3);
 			}
 
 			switch(randAtaq)
 			{
-				case 1:
-				{
-					AtaqueCruz(i);
-					break;
-				}
 				case 2:
 				{
-
+					
 					break;
 				}
 				case 3:
 				{
-
+					
+					break;
+				}
+				default:
+				{
+					AtaqueCruz(i);
 					break;
 				}
 			}
