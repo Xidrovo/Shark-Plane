@@ -1,20 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Looper.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainCharacter\muerteJug.cs">
     <Files>
-      <File FileName="Assets\Scripts\Tutorial\Testo.cs" Line="36" Column="18" />
-      <File FileName="Assets\Scripts\Villanos\Mexistor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\atribCueva.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\ataqBoss.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\Atributos.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\Fundamuertos.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\UnPolitecnical.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LifeController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainCharacter\explosion.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\BossLife.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Villanos\ESPOLATOR\Stop.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Looper.cs" Line="33" Column="1" />
+      <File FileName="Assets\Scripts\MainCharacter\muerteJug.cs" Line="32" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

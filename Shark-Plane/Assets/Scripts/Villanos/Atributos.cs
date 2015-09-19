@@ -6,7 +6,7 @@ public class Atributos : MonoBehaviour {
 	// Use this for initialization
 	public float Speedy=6f, Speedx = AtributosGenerales.Speed/2, vida=1f;
 	public int Puntos = 50, Temp = 0;
-	public float AlturaMax, Rango, Speed=25f;
+	public float AlturaMax, Rango, Speed = 25f, damage = 5;
 	public Score score;
 	private GameObject nuevo;
 	private Quaternion rotation= Quaternion.Euler(0,0,0);

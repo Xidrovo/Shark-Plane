@@ -26,7 +26,17 @@ public class muerteJug : MonoBehaviour {
 	public void Kill()
 	{
 		bd = 1;
+        MainTributes.Invunerable = true;
+        this.GetComponent<BoxCollider2D>().isTrigger = true;
+        Invoke("Respawn", 2f);
+        this.GetComponent<Animator>().SetInteger("Estado", 1);
 	}
 
+    public void Respawn()
+    {
+        MainTributes.Invunerable = false;
+        this.GetComponent<BoxCollider2D>().isTrigger = false;
+        this.GetComponent<Animator>().SetInteger("Estado", 0);
+    }
 
 }
