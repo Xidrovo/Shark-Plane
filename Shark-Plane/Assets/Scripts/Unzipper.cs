@@ -5,7 +5,7 @@ using System.IO.Ports;
 public class Unzipper : MonoBehaviour {
 
 	// Use this for initialization
-	SerialPort Puerto = new SerialPort ("COM3", 115200);
+	SerialPort Puerto = new SerialPort ("COM4", 115200);
 	public string[] values = new string[3];
 
 	void Start () 
